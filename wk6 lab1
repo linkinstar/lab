@@ -1,0 +1,27 @@
+package guessgame;
+import java.util.Scanner;
+public class guessgame {
+
+        public static void main(String[] args)
+        {
+                Scanner input = new Scanner (System.in);
+                int usernum;
+                int computernum;
+                int count =1 ;
+                while( count <4)
+                {
+                        computernum = 0+ (int)(Math.random()*10);
+                        System.out.println("Enter number between 0 and 10 : ");
+                        usernum= input.nextInt();
+                        if( usernum >computernum)
+                                System.out.println("too big");
+                        else if(usernum < computernum)
+                                System.out.println("Too small");
+                        else System.out.println(" Match");
+                        System.out.println("Random number is "+ computernum);
+                        count++;
+
+                }
+        }
+
+}
